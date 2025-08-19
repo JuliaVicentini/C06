@@ -10,10 +10,18 @@ public class Main {
         System.out.println(zumbi1.mostraVida());
         System.out.println(zumbi2.mostraVida());
 
-        zumbi2.transfereVida(zumbi1, 40);
-        zumbi1.transfereVida(zumbi2, 100);
+        if(zumbi1.transfereVida(zumbi2, 50)){
+            System.out.println("Fazendo z1 transferir 50 para z2");
+            System.out.println("Vida do zumbi z1: " + zumbi1.vida);
+            System.out.println("Vida do zumbi z2: " + zumbi2.vida);
+        }
 
-        System.out.println(zumbi1.mostraVida());
-        System.out.println(zumbi2.mostraVida());
+        if(zumbi1.transfereVida(zumbi2, 150)){
+            System.out.println("Fazendo z1 transferir 150 para z2");
+            System.out.println("Vida do zumbi z1: " + zumbi1.vida);
+            System.out.println("Vida do zumbi z2: " + zumbi2.vida);
+        }else{
+            System.out.println("A vida não foi alterada!!");
+        }
     }
 }
